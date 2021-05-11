@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# CakePHP AdminLTE Theme (2.0.0)
-=======
 # CakePHP AdminLTE Theme (2.1.0)
->>>>>>> v3-upgrade
 
 **What's the news**
 
@@ -10,11 +6,7 @@ The AdminLTE was updated version to 3.1.0.
 
 The CakePHP was updated version compatible to 4.0.0.
 
-<<<<<<< HEAD
-This release 2.0.0 is can be considered the stable version, as indicated in the [SemVer.org](https://semver.org/) recommendations.
-=======
 This release 2.1.0 is can be considered the stable version, as indicated in the [SemVer.org](https://semver.org/) recommendations.
->>>>>>> v3-upgrade
 
 ### Installation
 
@@ -60,7 +52,7 @@ public function initialize()
 
 ### Configure
 
-````php
+```php
 // new config/theme.php file
 
 return [
@@ -86,14 +78,7 @@ return [
         'iframe' => false,
     ]
 ];
-
-<<<<<<< HEAD
-// config/bootstrap.php
-
-Configure::load('adminlte', 'default');
 ```
-=======
->>>>>>> v3-upgrade
 
 # Customize Layout
 
@@ -118,7 +103,7 @@ There are 2 Blocks where you can extend your theme.
 
 ```php
 <?php echo $this->fetch('css'); ?>
-````
+```
 
 One example is `templates/Pages/home.php`:
 

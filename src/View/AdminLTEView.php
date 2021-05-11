@@ -1,9 +1,10 @@
 <?php
+
+declare(strict_types=1);
+
 namespace AdminLTE\View;
 
-use \App\View\AppView;
-use \Cake\Core\App;
-use \Cake\Utility\Inflector;
+use App\View\AppView;
 
 class AdminLTEView extends AppView
 {

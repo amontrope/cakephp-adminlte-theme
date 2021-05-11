@@ -2,8 +2,6 @@
   "name": "maiconpinto/cakephp-adminlte-theme",
   "description": "CakePHP 4.x AdminLTE Theme.",
   "type": "cakephp-plugin",
-  "keywords": ["cakephp", "templates", "plugin"],
-  "homepage": "https://github.com/maiconpinto/cakephp-adminlte-theme",
   "license": "MIT",
   "authors": [
     {
@@ -22,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AdminLTE\\": "src"
+      "AdminLTE\\": "src/"
     }
   },
   "support": {

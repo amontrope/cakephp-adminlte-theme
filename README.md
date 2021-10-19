@@ -175,16 +175,6 @@ Basically, you overwrite any theme, plugin and prefix files.
 3. templates/Plugin/$theme/$prefix/
 4. templates/Plugin/$theme/
 
-### FormHelper
-
-FormHelper by default has format template based on Foundation template. This helper overwrite these templates.
-
-### Behavior
-
-- **DatepickerBehavior**
-
-When you configure `App.defaultLocale` to `pt_BR` this Behavior is util.
-
 # Contributing
 
 1. Fork it

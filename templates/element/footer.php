@@ -1,13 +1,13 @@
+<?php
+
+/**
+ * @var \App\View\AppView $this
+ */
+?>
 <footer class="main-footer">
-  <?php if (isset($layout) && $layout == 'top'): ?>
-  <div class="container">
-  <?php endif; ?>
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.5
+    <strong>Copyright &copy; 2014-2021 <?= $this->Html->link('AdminLTE.io', 'http://adminlte.io') ?>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 3.1.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  <?php if (isset($layout) && $layout == 'top'): ?>
-  </div>
-  <?php endif; ?>
 </footer>

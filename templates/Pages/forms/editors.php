@@ -1,90 +1,106 @@
-<!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Text Editors
-        <small>Advanced form element</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Forms</a></li>
-        <li class="active">Editors</li>
-      </ol>
-    </section>
+<?php
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="box box-info">
-            <div class="box-header">
-              <h3 class="box-title">CK Editor
-                <small>Advanced and full of features</small>
-              </h3>
-              <!-- tools box -->
-              <div class="pull-right box-tools">
-                <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-                  <i class="fa fa-minus"></i></button>
-                <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove">
-                  <i class="fa fa-times"></i></button>
-              </div>
-              <!-- /. tools -->
+/**
+ * @var \App\View\AppView $this
+ */
+$this->assign('title', __('Editors'));
+?>
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Text Editors</h1>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body pad">
-              <form>
-                    <textarea id="editor1" name="editor1" rows="10" cols="80">
-                                            This is my textarea to be replaced with CKEditor.
-                    </textarea>
-              </form>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">Text Editors</li>
+                </ol>
             </div>
-          </div>
-          <!-- /.box -->
-
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Bootstrap WYSIHTML5
-                <small>Simple and fast</small>
-              </h3>
-              <!-- tools box -->
-              <div class="pull-right box-tools">
-                <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-                  <i class="fa fa-minus"></i></button>
-                <button type="button" class="btn btn-default btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove">
-                  <i class="fa fa-times"></i></button>
-              </div>
-              <!-- /. tools -->
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body pad">
-              <form>
-                <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-              </form>
-            </div>
-          </div>
         </div>
-        <!-- /.col-->
-      </div>
-      <!-- ./row -->
-    </section>
-    <!-- /.content -->
+    </div>
+</section>
 
-<!-- bootstrap wysihtml5 - text editor -->
-<?php echo $this->Html->css('AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min', ['block' => 'css']); ?>
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-outline card-info">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        Summernote
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <textarea id="summernote">
+                Place <em>some</em> <u>text</u> <strong>here</strong>
+              </textarea>
+                </div>
+                <div class="card-footer">
+                    Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-outline card-info">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        CodeMirror
+                    </h3>
+                </div>
+                <div class="card-body p-0">
+                    <textarea id="codeMirrorDemo" class="p-3">
+<div class="info-box bg-gradient-info">
+  <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
+  <div class="info-box-content">
+    <span class="info-box-text">Bookmarks</span>
+    <span class="info-box-number">41,410</span>
+    <div class="progress">
+      <div class="progress-bar" style="width: 70%"></div>
+    </div>
+    <span class="progress-description">
+      70% Increase in 30 Days
+    </span>
+  </div>
+</div>
+              </textarea>
+                </div>
+                <div class="card-footer">
+                    Visit <a href="https://codemirror.net/">CodeMirror</a> documentation for more examples and information about the plugin.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<!-- CK Editor -->
-<?php echo $this->Html->script('AdminLTE./bower_components/ckeditor/ckeditor', ['block' => 'script']); ?>
-<!-- Bootstrap WYSIHTML5 -->
-<?php echo $this->Html->script('AdminLTE./plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min', ['block' => 'script']); ?>
+<?= $this->Html->css([
+    'AdminLTE./plugins/summernote/summernote-bs4.min',
+    'AdminLTE./plugins/codemirror/codemirror',
+    'AdminLTE./plugins/codemirror/theme/monokai',
+    'AdminLTE./plugins/simplemde/simplemde.min'
+], ['block' => true]) ?>
 
+<?= $this->Html->script([
+    'AdminLTE.demo',
+    'AdminLTE./plugins/summernote/summernote-bs4.min',
+    'AdminLTE./plugins/codemirror/codemirror',
+    'AdminLTE./plugins/codemirror/mode/css/css',
+    'AdminLTE./plugins/codemirror/mode/xml/xml',
+    'AdminLTE./plugins/codemirror/mode/htmlmixed/htmlmixed',
+], ['block' => true]) ?>
 
-<?php $this->start('scriptBottom'); ?>
+<?php $this->append('script'); ?>
 <script>
-  $(function () {
-    // Replace the <textarea id="editor1"> with a CKEditor
-    // instance, using default configuration.
-    CKEDITOR.replace('editor1')
-    //bootstrap WYSIHTML5 - text editor
-    $('.textarea').wysihtml5()
-  })
+    $(function() {
+        // Summernote
+        $('#summernote').summernote()
+
+        // CodeMirror
+        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+            mode: "htmlmixed",
+            theme: "monokai"
+        });
+    })
 </script>
 <?php $this->end(); ?>
